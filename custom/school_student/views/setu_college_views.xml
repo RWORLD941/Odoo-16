@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="school_student_inherited_setu_college_view_form" model="ir.ui.view">
+        <field name="name">school_student_inherited_setu_college_view_form</field>
+        <field name="model">setu.college</field>
+        <field name="inherit_id" ref="setu_college_management.setu_college_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='college_no']" position="before">
+<!--                can be before, after, replace, attribute-->
+                <field name="college_expire_date"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
